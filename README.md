@@ -1,4 +1,4 @@
-# Proyek Pemrograman Mobile Kelompok 6: Pharmastock - Sistem Manajemen Stok Farmasi
+# Proyek Pemrograman Mobile Kelompok 6: Pharmadex - Sistem Manajemen Stok Farmasi
 
 ## Tentang Aplikasi
 Pharmastock adalah aplikasi mobile untuk memantau stok farmasi.
@@ -20,3 +20,4 @@ Raja Muhammad Dafa	                  241402116
 - Menunjukkan daftar supplier dan sejarah pembelian dari supplier tersebut
 - Pengingat untuk opname stock serta adjustmentnya
 - Peringatan untuk batch yang hampir kadaluarsa serta yang sudah kadaluarsa
+- [
