@@ -1,7 +1,7 @@
 # Proyek Pemrograman Mobile Kelompok 6: Pharmadex - Sistem Manajemen Stok Farmasi
 
 ## Tentang Aplikasi
-Pharmastock adalah aplikasi mobile untuk memantau stok farmasi.
+Pharmadex adalah aplikasi mobile untuk memantau stok farmasi.
 
 ## Anggota Kelompok:
 ```
