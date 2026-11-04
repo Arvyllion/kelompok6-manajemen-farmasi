@@ -18,6 +18,7 @@ Raja Muhammad Dafa                      241402116
 - Menunjukkan info dasar obat serta kategorinya
 - Menunjukkan keluar masuknya obat dari farmasi
 - Menunjukkan daftar supplier dan sejarah pembelian dari supplier tersebut
+- Menunjukkan sejarah tindakan-tindakan manajemen pegawai terhadap stock obat
 - Pengingat untuk opname stock serta adjustmentnya
 - Peringatan untuk batch yang hampir kadaluarsa serta yang sudah kadaluarsa
-- [
+
