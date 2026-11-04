@@ -1,7 +1,7 @@
 # Proyek Pemrograman Mobile Kelompok 6: Pharmadex - Sistem Manajemen Stok Farmasi
 
 ## Tentang Aplikasi
-Pharmadex adalah aplikasi mobile untuk memantau stok farmasi.
+Pharmadex adalah aplikasi mobile untuk memantau stok farmasi. Pharmadex bertujuan untuk membantu perusahaan farmasi untuk melakukan manajemen stock obatnya agar manajemen stock obat menjadi lebih cepat dan tepat.
 
 ## Anggota Kelompok:
 ```
@@ -22,3 +22,6 @@ Raja Muhammad Dafa                      241402116
 - Pengingat untuk opname stock serta adjustmentnya
 - Peringatan untuk batch yang hampir kadaluarsa serta yang sudah kadaluarsa
 
+## User Roles
+- Karyawan: User biasa yang memiliki wewenang manajemen stock obat seperti penambahan batch stock obat, pengurangan jumlah dalam batch stock obat, dan mengakses info dasar tentang obat-obat. Karyawan juga akan diingatkan untuk melakukan opname stock dan juga akan diperingatkan ketika batch stock obat hendak atau telah kadaluarsa.
+- Manajer: User dengan wewenang Karyawan, namun dengan tambahan wewenang untuk memantau sejarah manajemen pegawai dan sejarah pembelian obat dari supplier.
