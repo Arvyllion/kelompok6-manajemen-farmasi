@@ -17,7 +17,7 @@ Raja Muhammad Dafa                      241402116
 - Memantau stock obat berdasarkan batch produksi, bukan keseluruhan
 - Menunjukkan info dasar obat serta kategorinya
 - Menunjukkan keluar masuknya obat dari farmasi
-- Mengeluarkan obat secara First In First Out, stok dikurangi dari batch yang paling dekat kadaluarsanya
+- Mengeluakan obat stok dari batch yang paling dekat kadaluarsanya
 - Menunjukkan daftar supplier dan sejarah pembelian dari supplier tersebut
 - Menunjukkan sejarah tindakan-tindakan manajemen pegawai terhadap stock obat
 - Pengingat untuk opname stock serta adjustmentnya
