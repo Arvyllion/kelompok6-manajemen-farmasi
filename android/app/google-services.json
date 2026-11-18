@@ -1,0 +1,54 @@
+{
+  "project_info": {
+    "project_number": "795846039373",
+    "project_id": "kelompok6-manajemen-farmasi",
+    "storage_bucket": "kelompok6-manajemen-farmasi.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:795846039373:android:88646783f828290d034904",
+        "android_client_info": {
+          "package_name": "com.example.kelompok6_manajemen_farmasi"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "795846039373-65k626dnmn8e00utnde1jnsev6eo90lv.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.kelompok6_manajemen_farmasi",
+            "certificate_hash": "48d76f49847dd911542ed5cd75aa5f017b9dc6a7"
+          }
+        },
+        {
+          "client_id": "795846039373-ljg2dti443gcs70nbioveu1pq0hvjgm8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDGRoTTg_SFo0A9GIUEzGLNrniYTkSVFWM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "795846039373-ljg2dti443gcs70nbioveu1pq0hvjgm8.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "795846039373-24uk3q7podadi76sad9s8rgmu77fvdfe.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.kelompok6ManajemenFarmasi"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
