@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:kelompok6_manajemen_farmasi/models/task.dart';
-import 'package:kelompok6_manajemen_farmasi/services/task_service.dart';
+import 'package:pharmadex/models/task.dart';
+import 'package:pharmadex/services/task_service.dart';
+import 'package:pharmadex/services/notification_service.dart';
 
 class TaskListPage extends StatefulWidget {
   const TaskListPage({super.key});
@@ -56,7 +57,14 @@ class _TaskListPageState extends State<TaskListPage> {
               final title = _titleController.text.trim();
               if (title.isEmpty) return;
 
-              _taskService.addTask(title).catchError((e) => _showError(e));
+              _taskService
+                  .addTask(title)
+                  .then((_) => NotificationService.show(
+                        title: 'Tugas tersimpan ✅',
+                        body: '"$title" sudah aman tersimpan di server',
+                        payload: 'task',
+                      ))
+                  .catchError((e) => _showError(e));
               Navigator.pop(dialogContext);
             },
             child: const Text('Simpan'),
@@ -120,6 +128,7 @@ class _TaskListPageState extends State<TaskListPage> {
               foregroundColor: Colors.white,
             ),
             onPressed: () {
+              NotificationService.cancelReminder(task.id);   // BARU: batalin pengingatnya dulu
               _taskService
                   .deleteTask(task.id)
                   .catchError((e) => _showError(e));
@@ -128,6 +137,35 @@ class _TaskListPageState extends State<TaskListPage> {
             child: const Text('Hapus'),
           ),
         ],
+      ),
+    );
+  }
+
+  Future<void> _pickReminder(Task task) async {
+    final picked = await showTimePicker(
+      context: context,
+      initialTime: TimeOfDay.now(),
+      helpText: 'Ingatkan "${task.title}" jam',
+    );
+
+    if (picked == null) return; // user tekan Batal
+
+    final exact = await NotificationService.scheduleReminder(
+      taskId: task.id,
+      taskTitle: task.title,
+      hour: picked.hour,
+      minute: picked.minute,
+    );
+
+    if (!mounted) return; // halaman udah ditutup selama nunggu
+    ScaffoldMessenger.of(context).showSnackBar(
+      SnackBar(
+        content: Text(
+          exact
+              ? 'Pengingat dipasang jam ${picked.format(context)}'
+              : 'Pengingat dipasang jam ${picked.format(context)}, '
+                  'Telat karena izin alarm tepat belum aktif',
+        ),
       ),
     );
   }
@@ -181,6 +219,11 @@ class _TaskListPageState extends State<TaskListPage> {
                   trailing: Row(
                     mainAxisSize: MainAxisSize.min,
                     children: [
+                      IconButton(                                         // BARU
+                        icon: const Icon(Icons.alarm_add, color: Colors.orange),
+                        tooltip: 'Pasang pengingat',
+                        onPressed: () => _pickReminder(task),
+                      ),
                       IconButton(
                         icon: const Icon(Icons.edit, color: Colors.blue),
                         onPressed: () => _showEditDialog(task),

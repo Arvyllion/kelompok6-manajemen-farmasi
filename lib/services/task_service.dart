@@ -1,6 +1,6 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:kelompok6_manajemen_farmasi/models/task.dart';
+import 'package:pharmadex/models/task.dart';
 
 // Kurir yang bolak-balik antara halaman dan Firestore.
 // Halaman gak pernah ngobrol langsung sama Firestore, semua lewat sini.

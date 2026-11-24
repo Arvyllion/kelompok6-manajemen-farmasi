@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 
-import 'package:kelompok6_manajemen_farmasi/screens/home_page.dart';
-import 'package:kelompok6_manajemen_farmasi/screens/search_page.dart';
-import 'package:kelompok6_manajemen_farmasi/screens/profile_page.dart';
-import 'package:kelompok6_manajemen_farmasi/screens/task_list_page.dart';
+import 'package:pharmadex/screens/home_page.dart';
+import 'package:pharmadex/screens/search_page.dart';
+import 'package:pharmadex/screens/profile_page.dart';
+import 'package:pharmadex/screens/task_list_page.dart';
+import 'package:pharmadex/services/notification_service.dart';
 
 class MainNavigation extends StatefulWidget {
   const MainNavigation({super.key});
@@ -16,6 +17,12 @@ class _MainNavigationState extends State<MainNavigation> {
   int _selectedIndex = 0;
 
   final List<Widget> _pages = [HomePage(), SearchPage(), TaskListPage(), ProfilePage()];
+  
+  @override
+  void initState() {
+    super.initState();
+    NotificationService.requestPermission();
+  }
 
   @override
   Widget build(BuildContext context) {

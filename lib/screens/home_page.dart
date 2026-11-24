@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:permission_handler/permission_handler.dart';
-import 'package:kelompok6_manajemen_farmasi/screens/detail_page.dart';
-import 'package:kelompok6_manajemen_farmasi/services/permission_service.dart';
+import 'package:pharmadex/screens/detail_page.dart';
+import 'package:pharmadex/services/permission_service.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});

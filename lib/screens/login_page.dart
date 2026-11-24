@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:kelompok6_manajemen_farmasi/services/auth_service.dart';
+import 'package:pharmadex/services/auth_service.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});

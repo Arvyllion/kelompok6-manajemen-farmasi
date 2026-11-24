@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:kelompok6_manajemen_farmasi/screens/login_page.dart';
-import 'package:kelompok6_manajemen_farmasi/navigation/main_navigation.dart';
+import 'package:pharmadex/screens/login_page.dart';
+import 'package:pharmadex/navigation/main_navigation.dart';
 
 class AuthWrapper extends StatelessWidget {
   const AuthWrapper({super.key});

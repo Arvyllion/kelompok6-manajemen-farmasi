@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
-import 'package:kelompok6_manajemen_farmasi/firebase_options.dart';
-import 'package:kelompok6_manajemen_farmasi/navigation/auth_wrapper.dart';
+import 'package:pharmadex/firebase_options.dart';
+import 'package:pharmadex/navigation/auth_wrapper.dart';
+import 'package:pharmadex/services/notification_service.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -9,6 +10,8 @@ Future<void> main() async {
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );
+
+  await NotificationService.init(); // baru
 
   runApp(const MyApp());
 }

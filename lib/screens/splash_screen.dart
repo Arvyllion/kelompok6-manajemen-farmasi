@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:kelompok6_manajemen_farmasi/screens/login_page.dart';
+import 'package:pharmadex/screens/login_page.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
